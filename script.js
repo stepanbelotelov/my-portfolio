@@ -6,32 +6,34 @@ const currentTheme = localStorage.getItem('portfolio-theme');
 const changeTheme = () => {
     themeBtn.classList.add('spinning');
 
-    setTimeout(() => {
-        document.body.classList.toggle('light-mode');
+    setTimeout(applyTheme, 200);
+}
 
-        if (document.body.classList.contains('light-mode')) {
-            themeBtn.innerText = '🌙';
-            localStorage.setItem('portfolio-theme', 'light');
-        } else {
-            themeBtn.innerText = '☀️';
-            localStorage.setItem('portfolio-theme', 'dark');
-        }
+const applyTheme = () => {
+    document.body.classList.toggle('light-mode');
 
-        themeBtn.classList.remove('spinning');
-    }, 200);
+    if (document.body.classList.contains('light-mode')) {
+        themeBtn.innerText = '🌙';
+        localStorage.setItem('portfolio-theme', 'light');
+    } else {
+        themeBtn.innerText = '☀️';
+        localStorage.setItem('portfolio-theme', 'dark');
+    }
+
+    themeBtn.classList.remove('spinning');
 }
 
 
 
 // Main Script
-if (currentTheme === 'light') {
-    document.body.classList.add('light-mode');
-
-    if (themeBtn) {
-        themeBtn.innerText = '🌙';
-    }
+if (currentTheme === 'light' && themeBtn) {
+    themeBtn.innerText = '🌙';
 }
 
 if (themeBtn) {
     themeBtn.addEventListener('click', changeTheme);
 }
+
+window.addEventListener('load', () => {
+    document.body.classList.remove('preload');
+});

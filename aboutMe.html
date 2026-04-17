@@ -7,7 +7,14 @@
         <link rel="stylesheet" href="./style.css">
     </head>
 
-    <body>
+    <body class="preload">
+
+        <script>
+            if (localStorage.getItem('portfolio-theme') === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        </script>
+
         <header>
             <nav>
                 <a href="./index.html">Home</a>

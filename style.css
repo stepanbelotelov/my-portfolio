@@ -14,6 +14,10 @@ body.light-mode {
     --card-bg: #ffffff;
 }
 
+.preload, .preload * {
+    transition: none !important;
+}
+
 /* Global Reset */
 * {
     box-sizing: border-box;
@@ -78,16 +82,33 @@ nav a:hover {
     font-size: 24px;
     cursor: pointer;
     padding: 0 10px;
-    transition: transform 0.5s ease, opacity 0.2s ease;
-}
 
-.theme-btn.spinning {
-    transform: rotate(360deg) scale(0.5);
-    opacity: 0;
+    scale: 1;
+    rotate: 0deg;
+    
+    transition: scale 0.4s ease, opacity 0.2s ease;
 }
 
 .theme-btn:hover {
-    transform: rotate(360deg) scale(1.2);
+    scale: 1.2;
+    rotate: 360deg;
+
+    transition: scale 0.4s ease, opacity 3s ease, rotate 0.4s ease;
+}
+
+.theme-btn.spinning {
+    scale: 0.5;
+    rotate: 360deg;
+    opacity: 0;
+
+    transition: scale 0.2s ease, opacity 3s ease, rotate 0.2s ease;
+}
+
+body, header, .contact-form, ul {
+    transition: background-color 1s ease, color 3s ease;
+}
+.project-card {
+    transition: transform 0.2s ease, background-color 3s ease, border-color 3s ease;
 }
 
 /* Main */
