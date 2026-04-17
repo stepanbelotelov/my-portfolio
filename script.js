@@ -6,7 +6,7 @@ const currentTheme = localStorage.getItem('portfolio-theme');
 const changeTheme = () => {
     themeBtn.classList.add('spinning');
 
-    setTimeout(applyTheme, 200);
+    setTimeout(applyTheme, 170);
 }
 
 const applyTheme = () => {
