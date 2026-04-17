@@ -7,6 +7,12 @@
     --card-bg: #1e1e1e;
 }
 
+body.light-mode {
+    --bg-color: #f4f7f6;
+    --text-color: #333333;
+    --heading-color: #2c3e50;
+    --card-bg: #ffffff;
+}
 
 /* Global Reset */
 * {
@@ -64,6 +70,24 @@ nav a:hover {
     background-color: var(--accent-color);
     color: #ffffff;
     cursor: pointer;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: transform 0.5s ease, opacity 0.2s ease;
+}
+
+.theme-btn.spinning {
+    transform: rotate(360deg) scale(0.5);
+    opacity: 0;
+}
+
+.theme-btn:hover {
+    transform: rotate(360deg) scale(1.2);
 }
 
 /* Main */
@@ -135,7 +159,6 @@ section {
     border-color: #0088cc;
     color: white;
 }
-
 .social-btn.whatsapp:hover {
     background-color: #25D366;
     border-color: #25D366;
