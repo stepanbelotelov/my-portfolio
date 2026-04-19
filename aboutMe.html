@@ -30,7 +30,37 @@
         <main>
             <section id="aboutMe">
                 <h2>About Me</h2>
-                <p>I am a passionate developer who loves to build interactive web aplications</p>
+                <p>Get to know the person behind the code.</p>
+
+                <div class="editor-window">
+                    <div class="editor-header">
+                        <div class="window-controls">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="filename">developer.js</span>
+                    </div>
+
+                    <div class="editor-body">
+                        <pre>
+                            <code id="typing-code">
+<span class="keyword">const</span> <span class="variable">developer</span> = {
+    <span class="property">name</span>     : <span class="string">"Stepan Belotelov"</span>
+    <span class="property">location</span> : <span class="string">"Prague, Czech Republic"</span>
+    <span class="property">role</span>     : <span class="string">"Front-End Web Developer"</span>
+    <span class="property">passions</span> : <span class="string">"Interactive UIs"</span>, <span class="string">"Clean Code"</span>, <span class="string">"Game Dev"</span>
+
+    <span class="property">sayHello</span>: <span class="keyword">function()</span> {
+        <span class="keyword">return</span> <span class="string">"I love building interactive web applications!"</span>;
+    }
+};
+
+<span class="variable">console</span>.<span class="property">log</span>(<span class="variable">developer</span>.<span class="property">sayHello</span>());
+                            </code>
+                        </pre>
+                    </div>
+                </div>
             </section>
         </main>
 
