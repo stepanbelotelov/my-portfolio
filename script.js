@@ -2,12 +2,48 @@
 
 const themeBtn = document.getElementById('theme-toggle');
 const currentTheme = localStorage.getItem('portfolio-theme');
+const codeBlock = document.getElementById('typing-code');
+
+if (codeBlock) {
+    const htmlString = codeBlock.innerHTML;
+
+    codeBlock.innerHTML = '';
+
+    let i = 0;
+    let isTag = false;
+    let currentHTML = '';
+
+   const typeWriter = () => {
+        if (i < htmlString.length) {
+            let char = htmlString.charAt(i);
+            currentHTML += char;
+            codeBlock.innerHTML = currentHTML;
+
+            if (char === '<') isTag = true;
+            if (char === '>') isTag = false;
+
+            let delay;
+            if (isTag || char === ' ' || char === '\n') {
+                delay = 0;
+            } else {
+                delay = 25;
+            }
+
+            i++;
+            setTimeout(typeWriter, delay);
+        }
+    };
+    
+    setTimeout(typeWriter, 500);
+}
 
 const changeTheme = () => {
     themeBtn.classList.add('spinning');
 
     setTimeout(applyTheme, 170);
 }
+
+
 
 const applyTheme = () => {
     document.body.classList.toggle('light-mode');

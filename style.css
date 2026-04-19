@@ -297,6 +297,21 @@ section {
     color: #98c379;
 }
 
+#typing-code {
+    border-right: 2px solid var(--accent-color);
+    padding-right: 5px;
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--accent-color);
+    }
+}
+
 /* Project Cards & Lists*/
 
 .projects-grid {
