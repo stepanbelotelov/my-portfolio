@@ -221,6 +221,7 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     margin-top: 30px;
+    margin-bottom: 30px;
     border: 1px solid #333333;
     text-align: left;
 }
@@ -312,6 +313,30 @@ section {
         border-color: var(--accent-color);
     }
 }
+
+.pdf-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pdf-download {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: 1px solid #333333;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pdf-download:hover {
+    background-color: #cd4e4e;
+    border-color: #cd4e4e;
+    color: white;
+}
+
 
 /* Project Cards & Lists*/
 
@@ -533,27 +558,6 @@ li {
 
 .submit-btn:hover {
     background-color: #2980b9;
-}
-
-.pdf-container {
-    display: flex;
-    justify-content: center;
-}
-
-.pdf-download {
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    border: 1px solid #e5e3e3;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.pdf-download:hover {
-    background-color: #cd4e4e;
 }
 
 /* Animations */
