@@ -26,7 +26,7 @@ if (codeBlock) {
             if (isTag || char === ' ' || char === '\n') {
                 delay = 0;
             } else {
-                delay = 25;
+                delay = 20;
             }
 
             i++;

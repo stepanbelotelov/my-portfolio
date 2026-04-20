@@ -44,6 +44,7 @@ h1, h2, h3 {
 
 p {
     margin-bottom: 15px;
+    text-align: center;
 }
 
 /* Navigation */
@@ -505,6 +506,7 @@ li {
     background-color: var(--textarea-color);
     border: 1px solid #444444;
     border-radius: 4px;
+    resize: none;
     color: var(--text-color);
     font-family: inherit;
     font-size: 16px;
@@ -531,6 +533,27 @@ li {
 
 .submit-btn:hover {
     background-color: #2980b9;
+}
+
+.pdf-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pdf-download {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: 1px solid #e5e3e3;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pdf-download:hover {
+    background-color: #cd4e4e;
 }
 
 /* Animations */
